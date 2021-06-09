@@ -112,9 +112,9 @@ input#menuBurger:checked ~nav#navMenu {
 }
 /***** Conteneur aux dimensions fixes calées sur un slide *******/
 .slider-wrapper {
-    width: 830px;
+    width: 792px;
     height: 340px;
-     /* margin: 1em auto; */
+     margin: 0; 
     overflow: hidden;
 }
 /*** * Conteneur des slides qui va être animé sur l'axe X
