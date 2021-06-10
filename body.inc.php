@@ -33,5 +33,22 @@
             </ul>
          </div>
         </div>
-        <ul class="grid"
+        
     </div>
+    <ul class="grid">
+           <li class="grid-item">
+           <img src="" alt="madrid" />
+           </li>
+           <li class="grid-item">
+           <img src="./img/paris.jpg" alt="paris" />
+           </li>
+           <li class="grid-item">
+           <img src="./img/lisbonne.jpg" alt="lisbonne" />
+           </li>
+           <li class="grid-item">
+           <img src="./img/athens.jpg" alt="athens" />
+           </li>
+           <li class="grid-item">
+           <img src="./img/rome.jpg" alt="rome" />
+           </li>
+        </ul>

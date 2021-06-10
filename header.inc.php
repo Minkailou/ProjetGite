@@ -4,7 +4,7 @@
      <title>ProjetGite</title>
      <meta charset="utf-8">
      <link href="style.css" rel="stylesheet">
-     <link href="./img/logo.jpg" rel="icon">
+     <link href="./img/discover.png" rel="icon">
      <link href="./chemin-vers-fontawesome/css/all.css" rel="stylesheet">
 </head> 
 <body>
