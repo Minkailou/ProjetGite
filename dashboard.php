@@ -1,5 +1,7 @@
 <?php
 require_once("connexion.php");
+
+$id = $_GET['id_hebergement'];
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +43,7 @@ require_once("connexion.php");
                         <p class="stylegite"><?php echo $data['style']; ?></p>
                         <p class="prixgite"><?php echo $data['prix']; ?>€/nuit</p>
                         <div class="crudbtn">
-                            <button class="supprimer"><a href="confirm_delete.php" >Supprimer</a></button>
+                            <button class="supprimer"><?php echo "<a class='text-white' href= confirm_delete.php?id_hebergement=" . $data['id_hebergement'] . '>Supprimer</a>'?></button>
                             <button class="modifier">Modifier</button>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 <?php
 require_once('connexion.php');
-$id = $_GET['id_hebergement'];
+
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ $id = $_GET['id_hebergement'];
                  <button class="supprimer" type="submit">Supprimer</button>
                </fieldset>
              </form>
-             <button class="retour"><a href="dashboard.php">Annuler</a></button>
+             <button class="retour"><a href="dashboard.php?">Annuler</a></button>
         </div>
 </body>
 </html>
