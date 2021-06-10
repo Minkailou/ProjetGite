@@ -18,7 +18,7 @@ require_once("connexion.php");
             <form action="insert.php" method="POST">
                 <h1 class="title">Ajouter un logement</h1>
 
-                <input class="champs" type="text" name="titre">
+                <input class="champs" type="text" name="titre" placeholder="Nom du logement">
 
                 <select class="champs" name="ville">
                     <option value="">--Choisissez une ville</option>
@@ -29,7 +29,7 @@ require_once("connexion.php");
                     <option value="lisbonne">Lisbonne</option>
                 </select>
 
-                <input class="champs" type="number" name="prix min="0" max="6000">
+                <input class="champs" type="number" name="prix" min="0" max="6000" placeholder="Prix" step="0.01">
 
                 <select class="champs" name="style">
                     <option value="">--Choisissez un logement</option>
@@ -39,14 +39,14 @@ require_once("connexion.php");
                     <option value="chambre">Chambre d'hôtel</option>
                 </select>
 
-                <input class="champs" type="files" name="photo">
+                <input class="champs" type="file" name="photo">
 
-                <textarea class="champs" name="bio" rows="5" cols="33"></textarea>
+                <textarea class="champs" name="bio" rows="5" cols="33" placeholder="description du logement"></textarea>
 
-                <div class="chambre">
-                    <input class="champs2" type="number" name="chambre" min="0" max="7">
-                    <input class="champs2" type="number" name="salle_de_bain" min="0" max="5">
-                </div>
+                <input class="champs2" type="number" name="chambre" min="0" max="7" placeholder="nombre de chambres">
+
+                <input class="champs2" type="number" name="salle_de_bain" min="0" max="5" placeholder="nombre de salle de bain">
+                
                 <button type="submit">Ajouter</button>
             </form>
         </div>

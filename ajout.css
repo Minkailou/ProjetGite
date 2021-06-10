@@ -48,6 +48,7 @@ form{
     display: flex;
     flex-direction: column;
     margin: auto;
+    text-align: center;
 }
 
 .chambre{
@@ -57,10 +58,37 @@ form{
 }
 
 .champs{
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
 .champs2,
 .champs{
     height: 30px;
+    margin-bottom: 25px;
+}
+
+
+button{
+    height: 50px;
+    width: 200px;
+    border-radius: 32px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 25%;
+    color: black;
+    font-size: 2em;
+    font-family: var(--titre-para);
+    font-weight: bolder;
+    margin-top: 15px;
+}
+
+button:hover{
+    box-shadow: 0px 0px 35px 16px var(--couleur-hover);
+}
+
+input:focus{
+    box-shadow: 0px 0px 20px 5px var(--couleur-hover);
+    outline: none;
+    border: none;
 }

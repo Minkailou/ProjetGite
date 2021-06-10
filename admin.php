@@ -18,7 +18,7 @@ require_once("connexion.php");
                 <h1 class="title">Connexion</h1>
                 <input type="text" placeholder="Nom d'utilisateur" required>
                 <input type="password" placeholder="Mot de passe" required>
-                <button class="btnvalid" type="submit"><a href="dashboard.php" class="linkvalid">Valider</a></button>
+                <button class="btnvalid" type="submit">Valider</button>
             </form>
         </div>
     </div>
