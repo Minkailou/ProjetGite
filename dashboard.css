@@ -19,6 +19,8 @@ body{
     background-color: var(--couleur-page);
 }
 
+/*Bouton ajout*/
+
 .btnajoutcontainer{
     display: flex;
     justify-content: flex-end;
@@ -74,4 +76,93 @@ body{
     justify-content: center;
     font-family: var(--titre-style);
     letter-spacing: 2px;
+}
+
+/*gite*/
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--couleur-menu);
+    margin-left: 300px;
+    margin-right: 300px;
+    border-radius: 32px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    box-shadow: 12px 7px 14px 0px #1a1717;
+    border: 1px solid #4a4b7096
+}
+
+img{
+    width: 392px;
+    height: 244px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 60px;
+    border: 1px solid var(--couleur-page);
+    border-radius: 10px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 160px;
+}
+
+button{
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.crudbtn{
+    display: flex;
+}
+
+.supprimer,
+.modifier{
+    border: none;
+    border-radius: 30px;
+    color: var(--couleur-page);
+    cursor: pointer;
+} 
+
+
+.supprimer{
+    background-color: #971A1A;
+}
+
+.modifier{
+    background-color: #F0950C;
+}
+
+.titregite{
+    font-family: var(--titre-style);
+    letter-spacing: 2px;
+    color: var(--couleur-page);
+}
+
+p{
+    font-family: var(--titre-para);
+    font-weight: bolder;
+}
+
+a{
+    text-decoration: none;
+    color: var(--couleur-page);
+}
+
+/*page confirmation de suppression*/
+
+.card2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--couleur-menu);
+    margin-left: 300px;
+    margin-right: 300px;
+    border-radius: 32px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    box-shadow: 12px 7px 14px 0px #1a1717;
 }

@@ -19,7 +19,40 @@ require_once("connexion.php");
     </div>
     <div class="containertitles">
         <div class="wrappertitles">
+
+            <?php
+            $sql = "SELECT * FROM hebergement ORDER BY id_hebergement DESC";
+            $rs = $bdd->prepare($sql);
+            $rs->execute();
+            ?>
+
             <h1 class="titles">Disponible</h1>
+            <?php
+            while($data=$rs->fetch()){
+            ?>
+                <div class="card">
+                    <div class='img'>
+                        <img src="img/<?php echo $data['photo']; ?>" alt="photo de logement">
+                    </div>
+                    <div class="content">
+                        <h1 class="titregite"><?php echo $data['titre']; ?></h1>
+                        <p class="biogite"><?php echo $data['bio']; ?></p>
+                        <p class="villegite"><?php echo $data['ville']; ?></p>
+                        <p class="stylegite"><?php echo $data['style']; ?></p>
+                        <p class="prixgite"><?php echo $data['prix']; ?>€/nuit</p>
+                        <div class="crudbtn">
+                            <button class="supprimer"><a href="confirm_delete.php" >Supprimer</a></button>
+                            <button class="modifier">Modifier</button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            <?php 
+            //fermeture While
+            };
+            ?>
+            
             <h1 class="titles">Indisponible</h1>
         </div>
     </div>
