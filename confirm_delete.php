@@ -1,6 +1,6 @@
 <?php
 require_once('connexion.php');
-
+$id = $_POST['id-hebergement'];
 ?>
 
 <!DOCTYPE html>
@@ -17,11 +17,12 @@ require_once('connexion.php');
              <h2>Supprimer le logement ?</h2>
              <form class="content2" action="delete.php" method="POST">
                <fieldset>
-                    <input type="hidden" name="id_hebergement" value="<?php echo $id ?>">
-                 <button class="supprimer" type="submit">Supprimer</button>
+                  <input type="hidden" name="id_hebergement" value="<?php echo $id ?>">
+                 <button class="supprimer" type="submit">Supprimer</button> 
+                 <a href="dashboard.php?">Annuler</a>
                </fieldset>
              </form>
-             <button class="retour"><a href="dashboard.php?">Annuler</a></button>
+            
         </div>
 </body>
 </html>

@@ -120,7 +120,8 @@ button{
 }
 
 .supprimer,
-.modifier{
+.modifier,
+.retour{
     border: none;
     border-radius: 30px;
     color: var(--couleur-page);
@@ -165,4 +166,13 @@ a{
     margin-bottom: 40px;
     margin-top: 40px;
     box-shadow: 12px 7px 14px 0px #1a1717;
+}
+
+a{
+    text-decoration: none;
+    color: var(--couleur-page);
+}
+
+.retour{
+    background-color: gray;
 }
