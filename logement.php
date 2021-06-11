@@ -76,7 +76,7 @@ public function setStyle($style){
     if(is_string($style)){
         $this->_titre = $style;
     }
-}
+}    
 
 public function setDescription($description){
     if(is_string($description)){
