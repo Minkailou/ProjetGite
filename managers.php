@@ -69,18 +69,19 @@ class HebergementManager extends ConnexionManager{
         return $req;
     }
 
-    public function addHebergements($titre, $ville, $prix, $style, $photo, $bio, $chambre, $bain){
+    public function addHebergements($data){
         try{
             $rs = $this->dbPDO->prepare("INSERT INTO $this->tablename (titre, ville, prix, style, photo, bio, chambre, salle_de_bain) VALUE(:titre, :ville, :prix, :style, :photo, :bio, :chambre, :salle_de_bain)");
             $reponse = $rs->execute(array(
-                'titre'=>$titre,
-                'ville'=>$ville,
-                'prix'=>$prix,
-                'style'=>$style,
-                'photo'=>$photo,
-                'bio'=>$bio,
-                'chambre'=>$chambre,
-                'salle_de_bain'=>$bain
+                'titre'=>$data['titre'],
+                'ville'=>$data['ville'],
+                'prix'=>$data['prix'],
+                'style'=>$data['style'],
+                'photo'=>$data['photo'],
+                'bio'=>$data['bio'],
+                'chambre'=>$data['chambre'],
+                'salle_de_bain'=>$data['salle_de_bain'],
+
             ));
         }
     catch (Exception $e) {

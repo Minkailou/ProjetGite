@@ -1,4 +1,6 @@
 <?php
+require_once('managers.php');
+$managers = new HebergementManager("localhost", "root", "", "gite", "hebergement");
 
 class Hebergement{
     private $_id;
@@ -10,6 +12,7 @@ class Hebergement{
     private $_description;
     private $_chambre;
     private $_salle_de_bain;
+    private $_disponible;
 
     public function __construct($values){
         $this->_id = $values['id_hebergement'];
@@ -60,6 +63,10 @@ class Hebergement{
         return $this->_salle_de_bain;
     }
 
+    public function getDispo(){
+        return $this->_disponible;
+    }
+
     //setters
 
     public function setID($id){
@@ -99,5 +106,9 @@ class Hebergement{
     public function setBain($bain){
         $this->_salle_de_bain = $bain;
 
+    }
+
+    public function setDispo($disponible){
+        $this->_disponible = $disponible;
     }
 }

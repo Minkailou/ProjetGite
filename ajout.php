@@ -17,12 +17,7 @@ $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement
 <body>
     <div class="container">
         <div class="wrapper">
-            <?php
-                $add=$managers->addHebergements('titre','ville','prix', 'style', 'photo','bio','chambre','salle_de_bain');
-                $ajout=new Hebergement();
-
-            ?>
-            <form action="managers.php" method="POST">
+            <form action="appel.php?action=ajouter" method="POST">
                 <h1 class="title">Ajouter un logement</h1>
 
                 <input class="champs" type="text" name="titre" placeholder="Nom du logement">
@@ -53,8 +48,14 @@ $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement
                 <input class="champs2" type="number" name="chambre" min="0" max="7" placeholder="nombre de chambres">
 
                 <input class="champs2" type="number" name="salle_de_bain" min="0" max="5" placeholder="nombre de salle de bain">
+
+                <!-- <select class="champs" name="style">
+                    <option>--Le logement est il disponible ? --</option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select> -->
                 
-                <button type="submit">Ajouter</button>
+                <button type="submit" onclick=addHebergements()>Ajouter</button>
             </form>
         </div>
     </div>
