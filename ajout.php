@@ -1,6 +1,9 @@
 <?php
-require_once("connexion.php");
+require_once('managers.php');
+require 'hebergement.php';
+$managers = new HebergementManager("localhost", "root", "", "gite", "hebergement");
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -14,14 +17,18 @@ require_once("connexion.php");
 <body>
     <div class="container">
         <div class="wrapper">
-            
-            <form action="insert.php" method="POST">
+            <?php
+                $add=$managers->addHebergements('titre','ville','prix', 'style', 'photo','bio','chambre','salle_de_bain');
+                $ajout=new Hebergement();
+
+            ?>
+            <form action="managers.php" method="POST">
                 <h1 class="title">Ajouter un logement</h1>
 
                 <input class="champs" type="text" name="titre" placeholder="Nom du logement">
 
                 <select class="champs" name="ville">
-                    <option value="">--Choisissez une ville</option>
+                    <option>--Choisissez une ville--</option>
                     <option value="paris">Paris</option>
                     <option value="rome">Rome</option>
                     <option value="athnène">Athnène</option>
@@ -29,10 +36,10 @@ require_once("connexion.php");
                     <option value="lisbonne">Lisbonne</option>
                 </select>
 
-                <input class="champs" type="number" name="prix" min="0" max="6000" placeholder="Prix" step="0.01">
+                <input class="champs" type="number" name="prix" min="0" max="6000" placeholder="Prix">
 
                 <select class="champs" name="style">
-                    <option value="">--Choisissez un logement</option>
+                    <option>--Choisissez un logement--</option>
                     <option value="villa">Villa</option>
                     <option value="maison">Maison</option>
                     <option value="appartement">Appartement</option>

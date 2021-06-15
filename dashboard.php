@@ -1,7 +1,7 @@
 <?php
-require_once("connexion.php");
-
-$id = $_GET['id_hebergement'];
+require_once('managers.php');
+require 'hebergement.php';
+$managers = new HebergementManager("localhost", "root", "", "gite", "hebergement");
 ?>
 
 <!DOCTYPE html>
@@ -21,29 +21,25 @@ $id = $_GET['id_hebergement'];
     </div>
     <div class="containertitles">
         <div class="wrappertitles">
-
-            <?php
-            $sql = "SELECT * FROM hebergement ORDER BY id_hebergement DESC";
-            $rs = $bdd->prepare($sql);
-            $rs->execute();
-            ?>
-
             <h1 class="titles">Disponible</h1>
-            <?php
-            while($data=$rs->fetch()){
+            <?php 
+            $heb = $managers->getHebergements();
+            while($data = $heb->fetch()) {
+                $hebergement = new Hebergement($data);
+               
             ?>
                 <div class="card">
                     <div class='img'>
-                        <img src="img/<?php echo $data['photo']; ?>" alt="photo de logement">
+                        <img src="img/<?php echo $hebergement->getPhoto(); ?>" alt="photo de logement">
                     </div>
                     <div class="content">
-                        <h1 class="titregite"><?php echo $data['titre']; ?></h1>
-                        <p class="biogite"><?php echo $data['bio']; ?></p>
-                        <p class="villegite"><?php echo $data['ville']; ?></p>
-                        <p class="stylegite"><?php echo $data['style']; ?></p>
-                        <p class="prixgite"><?php echo $data['prix']; ?>€/nuit</p>
+                        <h1 class="titregite"><?php echo $hebergement->getTitre(); ?></h1>
+                        <p class="biogite"><?php echo $hebergement->getDescription(); ?></p>
+                        <p class="villegite"><?php echo $hebergement->getVille(); ?></p>
+                        <p class="stylegite"><?php echo $hebergement->getStyle(); ?></p>
+                        <p class="prixgite"><?php echo $hebergement->getPrix(); ?>€/nuit</p>
                         <div class="crudbtn">
-                            <button class="supprimer"><?php echo "<a class='text-white' href= confirm_delete.php?id_hebergement=" . $data['id_hebergement'] . '>Supprimer</a>'?></button>
+                            <button class="supprimer"><a href="">Supprimer</a></button>
                             <button class="modifier">Modifier</button>
                         </div>
                     </div>
