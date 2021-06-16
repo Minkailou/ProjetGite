@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Josefin+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Josefin+Sans:wght@100&family=Rambla&display=swap');
+
+
+:root {
+    --couleur-menu:#6C6EA0;
+    --couleur-page:#EBEBEB;
+    --couleur-hover:#FC7755;
+    --titre-style:'Audiowide', Sans-serif;
+    --titre-para: 'Josefin Sans', sans-serif;
+}
+
+/*gite*/
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--couleur-menu);
+    margin-left: 350px;
+    margin-right: 350px;
+    border-radius: 32px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    box-shadow: 12px 7px 14px 0px #1a1717;
+    border: 1px solid #4a4b7096;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+.imggite{
+    width: 392px;
+    height: 244px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 60px;
+    border: 1px solid var(--couleur-page);
+    border-radius: 10px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 120px;
+    
+}
+
+.view{
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: var(--couleur-page);
+    border: none;
+    border-radius: 50%;
+}
+
+.linkview{
+    text-decoration: none;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    color: rgb(47, 45, 45);
+}
+
+.view:hover{
+    transition: 0.8s;
+    box-shadow: -10px 10px 0px 1px #000;
+
+}

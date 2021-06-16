@@ -16,10 +16,10 @@
        
        <ul> 
           <img class="log-menu" src="./img/discover.png" alt="logo">
-          <li><a href="#">Paris</a></li>
-          <li><a href="#">Rome</a></li>
-          <li><a href="#">Athens</a></li>
-          <li><a href="#">Lisbonne</a></li>
-          <li><a href="#">Madrid</a></li>
+          <li><a href="paris.php">Paris</a></li>
+          <li><a href="rome.php">Rome</a></li>
+          <li><a href="athens.php">Athens</a></li>
+          <li><a href="lisbonne.php">Lisbonne</a></li>
+          <li><a href="madrid.php">Madrid</a></li>
         </ul>
     </nav>
