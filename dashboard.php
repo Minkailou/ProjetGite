@@ -39,7 +39,9 @@ $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement
                         <p class="stylegite"><?php echo $hebergement->getStyle(); ?></p>
                         <p class="prixgite"><?php echo $hebergement->getPrix(); ?>€/nuit</p>
                         <div class="crudbtn">
-                            <button class="supprimer"><a href="appel.php?action=supprimer">Supprimer</a></button>
+                        <form action="appel.php?action=supprimer&id=<?= $hebergement->getId(); ?>" method="POST">
+                                <input class="supprimer" type="submit" value="Supprimer">
+                        </form>
                             <button class="modifier">Modifier</button>
                         </div>
                     </div>
@@ -68,7 +70,9 @@ $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement
                         <p class="stylegite"><?php echo $hebergement->getStyle(); ?></p>
                         <p class="prixgite"><?php echo $hebergement->getPrix(); ?>€/nuit</p>
                         <div class="crudbtn">
-                            <button class="supprimer"><a href="appel.php?action=supprimer">Supprimer</a></button>
+                        <form action="appel.php?action=supprimer&id=<?= $hebergement->getId(); ?>" method="POST">
+                                <input class="supprimer" type="submit" value="Supprimer">
+                        </form>
                             <button class="modifier">Modifier</button>
                         </div>
                     </div>

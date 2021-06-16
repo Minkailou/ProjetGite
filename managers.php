@@ -152,6 +152,6 @@ class HebergementManager extends ConnexionManager{
     }
 
     public function delete($id){
-        $rs=exec("DELETE FROM gite WHERE id_hebergement = $id");
+        $this->dbPDO->exec("DELETE FROM $this->tablename WHERE id_hebergement = $id");
     }
 }

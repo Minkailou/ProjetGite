@@ -23,17 +23,15 @@ try {
 
 try {
     if($_GET['action'] == 'supprimer') {
-        //
-        foreach ($_POST as $key => $value) {
-            echo ("<script LANGUAGE='JavaScript'>
-                    window.alert('Suppression effectuée');
-                    window.location.href='dashboard.php';
-                    </script>");
-        }
-
-        $managers->delete($_GET['id_hebergement']);
+        echo ("<script LANGUAGE='JavaScript'>
+             window.alert('Suppression effectuée');
+             window.location.href='dashboard.php';
+             </script>");
+      
+        // echo $_GET['id'];
+        $managers->delete($_GET['id']);
         require_once("dashboard.php");
     }
 }catch (Exception $e) {
-die('error on index: ' . $e->getMessage() );
+die('error on delete: ' . $e->getMessage() );
 }
