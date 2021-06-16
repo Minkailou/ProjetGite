@@ -23,7 +23,7 @@ $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement
         <div class="wrappertitles">
             <h1 class="titles">Disponible</h1>
             <?php 
-            $heb = $managers->getHebergements();
+            $heb = $managers->getHebergementsdispo();
             while($data = $heb->fetch()) {
                 $hebergement = new Hebergement($data);
                
@@ -39,7 +39,7 @@ $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement
                         <p class="stylegite"><?php echo $hebergement->getStyle(); ?></p>
                         <p class="prixgite"><?php echo $hebergement->getPrix(); ?>€/nuit</p>
                         <div class="crudbtn">
-                            <button class="supprimer"><a href="">Supprimer</a></button>
+                            <button class="supprimer"><a href="appel.php?action=supprimer">Supprimer</a></button>
                             <button class="modifier">Modifier</button>
                         </div>
                     </div>
@@ -52,6 +52,31 @@ $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement
             ?>
             
             <h1 class="titles">Indisponible</h1>
+            <?php 
+            $heb = $managers->getHebergementsindispo();
+            while($data = $heb->fetch()) {
+                $hebergement = new Hebergement($data);
+            ?>
+            <div class="card">
+                    <div class='img'>
+                        <img src="img/<?php echo $hebergement->getPhoto(); ?>" alt="photo de logement">
+                    </div>
+                    <div class="content">
+                        <h1 class="titregite"><?php echo $hebergement->getTitre(); ?></h1>
+                        <p class="biogite"><?php echo $hebergement->getDescription(); ?></p>
+                        <p class="villegite"><?php echo $hebergement->getVille(); ?></p>
+                        <p class="stylegite"><?php echo $hebergement->getStyle(); ?></p>
+                        <p class="prixgite"><?php echo $hebergement->getPrix(); ?>€/nuit</p>
+                        <div class="crudbtn">
+                            <button class="supprimer"><a href="appel.php?action=supprimer">Supprimer</a></button>
+                            <button class="modifier">Modifier</button>
+                        </div>
+                    </div>
+                </div>
+            <?php
+            //fermeture While
+            };
+            ?>
         </div>
     </div>
 </body>

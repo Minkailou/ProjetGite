@@ -59,9 +59,19 @@ class HebergementManager extends ConnexionManager{
         $this->tablename=$tablename;
     }
 
-    public function getHebergements() {
+    public function getHebergementsdispo() {
         try {
-            $req = $this->dbPDO->query("SELECT * FROM $this->tablename ");
+            $req = $this->dbPDO->query("SELECT * FROM $this->tablename WHERE disponible ='oui' ");
+        }
+        catch (Exception $e) {
+            die('erreur on list: ' . $e->getMessage());
+        }
+        return $req;
+    }
+
+    public function getHebergementsindispo() {
+        try {
+            $req = $this->dbPDO->query("SELECT * FROM $this->tablename WHERE disponible = 'non' ");
         }
         catch (Exception $e) {
             die('erreur on list: ' . $e->getMessage());
@@ -71,7 +81,7 @@ class HebergementManager extends ConnexionManager{
 
     public function addHebergements($data){
         try{
-            $rs = $this->dbPDO->prepare("INSERT INTO $this->tablename (titre, ville, prix, style, photo, bio, chambre, salle_de_bain) VALUE(:titre, :ville, :prix, :style, :photo, :bio, :chambre, :salle_de_bain)");
+            $rs = $this->dbPDO->prepare("INSERT INTO $this->tablename (titre, ville, prix, style, photo, bio, chambre, salle_de_bain, disponible) VALUE(:titre, :ville, :prix, :style, :photo, :bio, :chambre, :salle_de_bain, :disponible)");
             $reponse = $rs->execute(array(
                 'titre'=>$data['titre'],
                 'ville'=>$data['ville'],
@@ -81,6 +91,7 @@ class HebergementManager extends ConnexionManager{
                 'bio'=>$data['bio'],
                 'chambre'=>$data['chambre'],
                 'salle_de_bain'=>$data['salle_de_bain'],
+                'disponible'=>$data['disponible']
 
             ));
         }
@@ -88,5 +99,9 @@ class HebergementManager extends ConnexionManager{
         die('erreur on add: ' . $e->getMessage() );
     }
     return $reponse; 
+    }
+
+    public function delete($id){
+        $rs=exec("DELETE FROM gite WHERE id_hebergement = $id");
     }
 }

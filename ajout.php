@@ -49,11 +49,11 @@ $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement
 
                 <input class="champs2" type="number" name="salle_de_bain" min="0" max="5" placeholder="nombre de salle de bain">
 
-                <!-- <select class="champs" name="style">
+                <select class="champs" name="disponible">
                     <option>--Le logement est il disponible ? --</option>
                     <option value="oui">Oui</option>
                     <option value="non">Non</option>
-                </select> -->
+                </select>
                 
                 <button type="submit" onclick=addHebergements()>Ajouter</button>
             </form>

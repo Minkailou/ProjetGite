@@ -24,6 +24,7 @@ class Hebergement{
         $this->_description = $values['bio'];
         $this->_chambre = $values['chambre'];
         $this->_salle_de_bain = $values['salle_de_bain'];
+        $this->_disponible = $values['disponible'];
     }
 //getters
 

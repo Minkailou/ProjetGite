@@ -90,7 +90,9 @@ body{
     margin-bottom: 40px;
     margin-top: 40px;
     box-shadow: 12px 7px 14px 0px #1a1717;
-    border: 1px solid #4a4b7096
+    border: 1px solid #4a4b7096;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 img{
@@ -107,6 +109,7 @@ img{
     flex-direction: column;
     justify-content: space-between;
     margin-right: 160px;
+    
 }
 
 button{
