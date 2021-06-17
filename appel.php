@@ -1,6 +1,5 @@
 <?php
 require_once('managers.php');
-
 $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement");
 
 try {
@@ -34,4 +33,16 @@ try {
     }
 }catch (Exception $e) {
 die('error on delete: ' . $e->getMessage() );
+}
+
+try{
+    if($_GET['action'] == 'modifier'){
+        $managers->update($_GET['id']);
+        echo ("<script LANGUAGE='JavaScript'>
+             window.alert('Modification effectuée');
+             window.location.href='dashboard.php';
+             </script>");
+    }
+}catch (Exception $e) {
+die('error on update: ' . $e->getMessage() );
 }

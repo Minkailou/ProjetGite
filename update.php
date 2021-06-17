@@ -1,6 +1,6 @@
 <?php
 require_once('managers.php');
-require 'hebergement.php';
+
 $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement");
 ?>
 
@@ -12,13 +12,13 @@ $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="ajout.css">
-    <title>Ajouter un logements</title>
+    <title>Modifier un logements</title>
 </head>
 <body>
     <div class="container">
         <div class="wrapper">
-            <form action="appel.php?action=ajouter" method="POST">
-                <h1 class="title">Ajouter un logement</h1>
+        <form action="appel.php?action=modifier&id=<?= $_GET['id']; ?>" method="POST">
+                <h1 class="title">Modifier un logement</h1>
 
                 <input class="champs" type="text" name="titre" placeholder="Nom du logement">
 
@@ -49,13 +49,15 @@ $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement
 
                 <input class="champs2" type="number" name="salle_de_bain" min="0" max="5" placeholder="nombre de salle de bain">
 
+                <input type="hidden" name="id_hebergement">
+
                 <select class="champs" name="disponible">
                     <option>--Le logement est il disponible ? --</option>
                     <option value="oui">Oui</option>
                     <option value="non">Non</option>
                 </select>
                 
-                <button type="submit">Ajouter</button>
+                <button type="submit">Modifier</button>
             </form>
         </div>
     </div>

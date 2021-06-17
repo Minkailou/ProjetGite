@@ -154,4 +154,24 @@ class HebergementManager extends ConnexionManager{
     public function delete($id){
         $this->dbPDO->exec("DELETE FROM $this->tablename WHERE id_hebergement = $id");
     }
-}
+
+    public function update($id){
+        try{
+        $rs = $this->dbPDO->prepare("UPDATE $this->tablename SET titre=:titre, ville=:ville, prix=:prix, style=:style, photo=:photo, bio=:bio, chambre=:chambre, salle_de_bain=:salle_de_bain, disponible=:disponible WHERE id_hebergement = $id ");
+
+        $reponse = $rs->execute(array(
+            'titre'=>$_POST['titre'],
+            'ville'=>$_POST['ville'],
+            'prix'=>$_POST['prix'],
+            'style'=>$_POST['style'],
+            'photo'=>$_POST['photo'],
+            'bio'=>$_POST['bio'],
+            'chambre'=>$_POST['chambre'],
+            'salle_de_bain'=>$_POST['salle_de_bain'],
+            'disponible'=>$_POST['disponible']
+        ));
+    }
+    catch (Exception $e) {
+        die('error on update: ' . $e->getMessage() );
+    }
+} }
