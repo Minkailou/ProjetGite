@@ -134,6 +134,8 @@ button{
 
 .supprimer{
     background-color: #971A1A;
+    padding: 10px;
+    margin-right: 10px;
 }
 
 .modifier{
