@@ -94,3 +94,25 @@ input:focus{
     outline: none;
     border: none;
 }
+
+@media (max-width: 721px) {
+    .wrapper{
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 405px) {
+    input,
+    textarea,
+    select{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 387px) {
+    button{
+        margin-left: 20%;
+    }
+}
