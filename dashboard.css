@@ -101,6 +101,7 @@ img{
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 60px;
+    margin-right: 40px;
     border: 1px solid var(--couleur-page);
     border-radius: 10px;
 }
@@ -151,6 +152,7 @@ button{
 p{
     font-family: var(--titre-para);
     font-weight: bolder;
+    font-size: 1.3em;
 }
 
 a{
