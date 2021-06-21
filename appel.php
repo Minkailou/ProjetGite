@@ -62,3 +62,18 @@ try{
 }catch (Exception $e) {
 die('error on update: ' . $e->getMessage() );
 }
+
+try{
+    if($_GET['action'] == 'recherche'){
+        $managers->reservation($_GET['id']);
+        if($gite->rowCount() == 0){
+            while($g = $gite->fetch()){
+                echo "<li> ".$g['titre']. "</li>";
+            }
+        }else{
+            echo"aucun résultat pour".$g."!";
+        }
+    }
+}catch (Exception $e) {
+die('error on update: ' . $e->getMessage() );
+}

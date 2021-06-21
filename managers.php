@@ -189,4 +189,15 @@ catch (Exception $e) {
 }
 } 
 
+public function recherche(){
+    $gite = $this->dbPDO->query('SELECT * FROM gite ORDER BY id_hebergement DESC');
+    if(isset($_GET['search']) && !empty($_GET['search'])){
+        $search = htmlspecialchars($_GET['search']);
+        $gite = $this->dbPDO->query('SELECT * FROM gite WHERE titre LIKE"%'.$search.'%" ORDER BY id_hebergement DESC');
+        if($gite->rowCount() == 0){
+            $gite = $this->dbPDO->query('SELECT * FROM gite WHERE CONCAT(titre, ville) LIKE "%'.$search.'%" ORDER BY id_hebergement DESC');
+        }
+    }
+}
+
 }

@@ -83,7 +83,7 @@ $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement
                         <form action="appel.php?action=supprimer&id=<?= $hebergement->getId(); ?>" method="POST">
                                 <input class="supprimer" type="submit" value="Supprimer">
                         </form>
-                            <button class="modifier"><a href="update.php?id=<?= $hebergement->getId(); ?>&titre=<?= urlencode($hebergement->getTitre()); ?>&prix=<?= $hebergement->getPrix(); ?>&bio=<?= $hebergement->getDescription(); ?>">Modifier</a></button>
+                            <button class="modifier"><a class="update" href="update.php?id=<?= $hebergement->getId(); ?>&titre=<?= urlencode($hebergement->getTitre()); ?>&prix=<?= $hebergement->getPrix(); ?>&bio=<?= $hebergement->getDescription(); ?>">Modifier</a></button>
                         </div>
                     </div>
                 </div>

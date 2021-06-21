@@ -34,9 +34,9 @@
          </div>
         </div>      
     </div>
-    <div class="input">
-        <input type="search"><button type="submit">Rechercher</button>
-    </div>
+    <form action="appel.php?action=recherche" class="input" method="GET">
+        <input type="search" placeholder="recherche..."><button type="submit">Rechercher</button>
+</form>
     <ul class="grid">
            <li class="grid-item">
            <img src="./img/madrid1.jpg" alt="madrid" />

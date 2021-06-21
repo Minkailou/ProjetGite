@@ -210,6 +210,10 @@ p{
     padding: 20px;
     font-size: 1.5em;
     } 
+
+    .sign_out{
+        font-size: 0.8em;
+    }
 }
 
 @media (max-width: 657px) {
