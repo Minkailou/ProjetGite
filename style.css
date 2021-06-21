@@ -3,11 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Josefin+Sans:wght@100&family=Rambla&display=swap');
 
 
-/* body {
-     /* margin: 0; */
-     /* padding: 0; */
+body{
+    background-color: var(--couleur-page);
+}
 
-/* } */
 /********************* Les variables  **********************/
 :root {
     --couleur-menu:#6C6EA0;
@@ -34,7 +33,7 @@ input#menuBurger {
 nav#navMenu {
     height: 0;
     opacity: 0;
-    
+    width: 100%;
     
 }
 nav#navMenu ul{
@@ -255,5 +254,21 @@ input#menuBurger:checked ~nav#navMenu {
     }
     
 }
+.input{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
 
+input{
+    margin-right: 5px;
+    width: 25%;
+    border-radius: 10px;
+    border: 1px solid var(--couleur-menu);
+    background-color: var(--couleur-page);
+}
+
+input:focus{
+    outline: none;
+}
 

@@ -33,7 +33,7 @@ $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement
                         <p class="stylegite"><?php echo $hebergement->getStyle(); ?></p>
                         <p class="prixgite"><?php echo $hebergement->getPrix(); ?>€/nuit</p>
                         <div class="crudbtn">
-                            <button class="view"><a class="linkview" href="">Voir</a></button>
+                            <button class="view"><a class="linkview" href="reservation.php?id=<?= $hebergement->getId(); ?>">Réserver</a></button>
                         </div>
                     </div>
                     

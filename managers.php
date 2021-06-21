@@ -174,4 +174,19 @@ class HebergementManager extends ConnexionManager{
     catch (Exception $e) {
         die('error on update: ' . $e->getMessage() );
     }
-} }
+} 
+
+public function reservation($id){
+    try{
+    $rs = $this->dbPDO->prepare("UPDATE $this->tablename SET disponible=:disponible WHERE id_hebergement = $id ");
+
+    $reponse = $rs->execute(array(
+        'disponible'=>$_POST['disponible']
+    ));
+}
+catch (Exception $e) {
+    die('error on update: ' . $e->getMessage() );
+}
+} 
+
+}

@@ -46,3 +46,19 @@ try{
 }catch (Exception $e) {
 die('error on update: ' . $e->getMessage() );
 }
+
+try{
+    if($_GET['action'] == 'reservation'){
+        $managers->reservation($_GET['id']);
+        if($_POST['disponible'] == "non"){
+            echo ("<script LANGUAGE='JavaScript'>
+             window.alert('Réservation Validée');
+             window.location.href='index.php';
+             </script>");
+        }else{
+            header('Location:index.php');
+        }
+    }
+}catch (Exception $e) {
+die('error on update: ' . $e->getMessage() );
+}

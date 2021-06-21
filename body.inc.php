@@ -32,12 +32,14 @@
                 <li class="slide"><img src="./img/villa1.jpg" alt="slide5"/></li>
             </ul>
          </div>
-        </div>
-        
+        </div>      
+    </div>
+    <div class="input">
+        <input type="search"><button type="submit">Rechercher</button>
     </div>
     <ul class="grid">
            <li class="grid-item">
-           <img src="" alt="madrid" />
+           <img src="./img/madrid1.jpg" alt="madrid" />
            </li>
            <li class="grid-item">
            <img src="./img/paris.jpg" alt="paris" />
