@@ -1,4 +1,10 @@
 <?php
+session_start();
+require("fonction/hote.php");
+if(!isconnected()){
+   header("location: admin.php");
+exit(); 
+}
 require_once('managers.php');
 require 'hebergement.php';
 $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement");

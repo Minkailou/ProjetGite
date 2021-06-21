@@ -154,11 +154,14 @@ p{
     font-size: 1.3em;
 }
 
-a{
+.update{
     text-decoration: none;
     color: var(--couleur-page);
 }
 
+.sign_out{
+    color: black;
+}
 
 @media (max-width: 1300px) {
     .card{
@@ -241,3 +244,4 @@ a{
         border-bottom: double black 4px;
     }
 }
+

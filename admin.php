@@ -1,5 +1,8 @@
 <?php
-require_once("connexion.php");
+session_start();
+require_once('managers.php');
+
+$managers = new HebergementManager("localhost", "root", "", "gite", "hebergement");
 ?>
 
 <!DOCTYPE html>
@@ -14,10 +17,10 @@ require_once("connexion.php");
 <body>
     <div class="container">
         <div class="wrapper">
-            <form action="">
+            <form action="login.php" method="POST">
                 <h1 class="title">Connexion</h1>
-                <input type="text" placeholder="Nom d'utilisateur" required>
-                <input type="password" placeholder="Mot de passe" required>
+                <input name="nom" type="text" placeholder="Nom d'utilisateur" required>
+                <input name="mdp" type="password" placeholder="Mot de passe" required>
                 <button class="btnvalid" type="submit">Valider</button>
             </form>
         </div>
