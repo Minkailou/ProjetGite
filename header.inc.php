@@ -15,11 +15,11 @@
     <nav role="navigation" id="navMenu">
        
        <ul> 
-          <img class="log-menu" src="./img/discover.png" alt="logo">
-          <li><a href="paris.php">Paris</a></li>
-          <li><a href="rome.php">Rome</a></li>
-          <li><a href="athens.php">Athens</a></li>
-          <li><a href="lisbonne.php">Lisbonne</a></li>
-          <li><a href="madrid.php">Madrid</a></li>
+          <a href="index.php"><img class="log-menu" src="./img/discover.png" alt="logo"></a>
+          <li><a class="link" href="paris.php">Paris</a></li>
+          <li><a class="link" href="rome.php">Rome</a></li>
+          <li><a class="link" href="athens.php">Athens</a></li>
+          <li><a class="link" href="lisbonne.php">Lisbonne</a></li>
+          <li><a class="link" href="madrid.php">Madrid</a></li>
         </ul>
     </nav>

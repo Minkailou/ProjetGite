@@ -52,7 +52,7 @@ nav#navMenu ul li a {
     justify-content: center;
     padding: 2rem;
 }
-nav#navMenu a:hover{
+nav#navMenu .link:hover{
     color: var(--couleur-hover);
     background-color: var(--couleur-page);
     padding-bottom: 2px;
