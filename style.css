@@ -2,22 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Josefin+Sans:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Josefin+Sans:wght@100&family=Rambla&display=swap');
 
-/* body { */
-     /* margin: 0; */
-     /* padding: 0; */
+ body { 
+      margin: 0; 
+     padding: 0; 
 
-/* } */
+ } 
 /********************* Les variables  **********************/
 :root {
     --couleur-menu:#6C6EA0;
     --couleur-page:#EBEBEB;
     --couleur-hover:#FC7755;
+    --couleur-tranparent:#ebebeb85;
     --titre-style:'Audiowide', Sans-serif;
     --titre-para: 'Josefin Sans', sans-serif;
 }
 /***** Logo du navbar *****/
 .log-menu{
-    margin-right: 250px;
+    margin-right: 680px;
 }
 /******************** Menu Burger ***************************/
 input#menuBurger {
@@ -53,8 +54,7 @@ nav#navMenu ul li a {
 }
 nav#navMenu a:hover{
     color: var(--couleur-hover);
-    background-color: var(--couleur-page);
-    padding-bottom: 2px;
+    background-color: var(--couleur-tranparent); 
     border-bottom: 3px solid var(--couleur-hover);
     text-shadow: 1px 1px 1px var(--couleur-menu);
 
@@ -105,117 +105,55 @@ input#menuBurger:checked ~nav#navMenu {
     }
       
 }
-/* ********************** Contenu de page ***********************/
-.contenu {
-    display: flex;
-    flex-direction: row;
-}
-/***** Conteneur aux dimensions fixes calées sur un slide *******/
-.slider-wrapper {
-    width: 792px;
-    height: 340px;
-     margin: 0; 
-    overflow: hidden;
-}
-/*** * Conteneur des slides qui va être animé sur l'axe X
-     * 1. 5 slides de 5 secondes -> animation de 25s
-     * 2. 5 slides ->largeur de 500%
-*/
-.slider {
-    list-style: none;
-    padding: 0;
-    animation: slide 25s infinite linear;
-    margin: 0;
-    width: 500%;
-    overflow: hidden;
-}
-/*** * Alignement des slides à l'horizontal * ***/
-.slide{
-    float: left;
-
-} 
-/**
-  * Tous les 20 %, on décale le conteneur de 20% sur la gauche
-  * pour faire place au slide suivant.
-  * Afin que le slider reste fixe durant le temps d'un slide.
-  * On limite les déplacements sur des intervalles de 1%.
-*/
-@keyframes slide {
-    0%, 19% {transform: translateX(0);  }
-    20%, 39% {transform: translateX(-20%);  }
-    40%, 59% {transform: translateX(-40%);  }
-    60%, 79% {transform: translateX(-60%);  }
-    80%, 99% {transform: translateX(-80%);  }
-    100%, 119% {transform: translateX(-100%);  }
-    120%, 39% {transform: translateX(-120%);  }
-    140%, 159% {transform: translateX(-140%);  }
-    160%, 179% {transform: translateX(-160%);  }
-    180%, 199% {transform: translateX(-180%);  }
-    200%, 0% {transform: translateX(-200%);  }
-    
-}  
-
-/******************************** Galerie d'images ***********************************/
-.grid {
-    list-style: none;
-    padding: .5em;
-    display: grid;
-    grid-auto-flow: row;
- 
-    grid-template-columns: 1fr;
-}
-
-.grid-item {
-    margin: .5em;
-}
-.grid-item:first-of-type {
-    grid-area: 1 / 1 / span 2 / span 2;
-}
-.grid-item img {
-    display: block;
-    height: auto;
-    max-width: 100%;
-    margin: 0 auto;
-}
-@media (min-width: 400px) {
-    .grid { grid-template-columns: 1fr 1fr};
-}
-
-@media (min-width: 600px) {
-    .grid { grid-template-columns: 1fr 1fr 1fr};
-}
-
-@media (min-width: 800px) {
-    .grid { grid-template-columns: 1fr 1fr 1fr 1fr};
-}
-
-@media (min-width: 1000px) {
-    .grid { grid-template-columns: 1fr 1fr 1fr 1fr 1fr};
-}
-@media (min-width: 1200px) {
-    .grid { grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr};
-}
-@media (min-width: 1400px) {
-    .grid { grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr};
-}
-    
-    
-    
-    
-    
-    
-
-/* ************************ Footer **************************** */
-/* footer{ */
-    /* display: flex; */
-    /* background: var(--couleur-menu); */
-    /* justify-content: space-around; */
-/* } */
+#gallery {
+    line-height:0;
+    -webkit-column-count:3; /* split it into 5 columns */
+     -webkit-column-gap:3px; /*give it a 5px gap between columns */
+    -moz-column-count:3;
+    -moz-column-gap:2px; 
+    column-count:3;
+     column-gap:3px; 
+ }
+ #gallery img {
+    width: 98% !important;
+    height: auto !important;
+    margin:5px; /* to match column gap */
+    box-shadow: 7px 7px 7px black;
+ }
+ @media (max-width: 1200px) {
+    #gallery {
+     -moz-column-count:    4;
+     -webkit-column-count: 4;
+     column-count:         4;
+    }
+ }
+ @media (max-width: 1000px) {
+    #gallery {
+     -moz-column-count:    3;
+     -webkit-column-count: 3;
+     column-count:         3;
+    }
+ }
+ @media (max-width: 800px) {
+    #gallery {
+     -moz-column-count:    2;
+     -webkit-column-count: 2;
+     column-count:         2;
+    }
+ }
+ @media (max-width: 400px) {
+    #gallery {
+     -moz-column-count:    1;
+     -webkit-column-count: 1;
+     column-count:         1;
+    }
+ }
 
 .navigation {
     list-style: none;
     padding: 0;
     margin: 0;
+    height: 300px;
     background: var(--couleur-menu);
 }
 
@@ -255,4 +193,89 @@ input#menuBurger:checked ~nav#navMenu {
     
 }
 
+ .slideshow{
+    margin: 0 auto;
+    padding-top: 120px;
+    height: 500px;
+    perspective: 1000px;
+
+  } 
+  .content{
+    margin: auto;
+    width: 150px;
+    perspective: 1000px;
+    position:relative;
+    padding-top: 80px;
+    transform-style: preserve-3d;
+  }
+  .slider-content{
+    width: 100%;
+    position:absolute;
+    float:right;
+    animation: rotate 15s infinite linear;
+    transform-style: preserve-3d;
+  }
+  .slider-content:hover{
+    cursor: pointer;
+    animation-play-state: paused;
+  }
+  .slider-content figure{
+    width:180px;
+    height:120px;
+    border:1px solid #555;
+    overflow:hidden;
+    position:absolute;
+  }
+  .slider-content img{
+    image-rendering: auto;
+    transition: all 300ms;
+    width: 100%;
+    height: 100%;
+  
+  }
+  .slider-content img:hover{
+    transform: scale(1.2); 
+    transition: all 300ms; 
+ } 
+ .shadow{ 
+    position: absolute; 
+    box-shadow: 0px 0px 0px #000; 
+ }
+ .slider-content figure:nth-child(1){
+    transform:rotateY(0deg) translateZ(300px);
+  }
+   
+  .slider-content figure:nth-child(2){
+    transform:rotateY(40deg) translateZ(300px);
+  }
+  .slider-content figure:nth-child(3){
+    transform:rotateY(80deg) translateZ(300px);
+  }
+  .slider-content figure:nth-child(4){
+    transform:rotateY(120deg) translateZ(300px);
+  }
+  .slider-content figure:nth-child(5){
+    transform:rotateY(160deg) translateZ(300px);
+  }
+  .slider-content figure:nth-child(6){
+    transform:rotateY(200deg) translateZ(300px);
+  }
+  .slider-content figure:nth-child(7){
+    transform:rotateY(240deg) translateZ(300px);
+  }
+  .slider-content figure:nth-child(8){
+    transform:rotateY(280deg) translateZ(300px);
+  }
+  .slider-content figure:nth-child(9){
+    transform:rotateY(320deg) translateZ(300px);
+  }
+  @keyframes rotate {
+    from{
+      transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+  }
+ 
 

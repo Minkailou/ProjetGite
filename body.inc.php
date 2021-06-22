@@ -1,54 +1,34 @@
 
     <!------------- Contenu body ------------------>
-    <div class="contenu">
-       <div class="contenu-one">
-        <div class="slider-wrapper">
-            <ul class="slider">
-                <li class="slide"><img src="./img/villa1.jpg" alt="slide1"/></li>
-                <li class="slide"><img src="./img/villa2.jpg" alt="slide2"/></li>
-                <li class="slide"><img src="./img/maison1.jpg" alt="slide3"/></li>
-                <li class="slide"><img src="./img/maison2.jpg" alt="slide4"/></li>
-                <li class="slide"><img src="./img/maison3.jpg" alt="slide5"/></li>
-                <li class="slide"><img src="./img/maison4.jpg" alt="slide1"/></li>
-                <li class="slide"><img src="./img/maison5.jpg" alt="slide2"/></li>
-                <li class="slide"><img src="./img/maison6.jpg" alt="slide3"/></li>
-                <li class="slide"><img src="./img/maison7.jpg" alt="slide4"/></li>
-                <li class="slide"><img src="./img/maison8.jpg" alt="slide5"/></li>
-            </ul>
-         </div>
-        </div>
-        <div class="contenu-two">
-        <div class="slider-wrapper">
-            <ul class="slider">
-            <li class="slide"><img src="./img/maison8.jpg" alt="slide1"/></li>
-                <li class="slide"><img src="./img/maison7.jpg" alt="slide2"/></li>
-                <li class="slide"><img src="./img/maison6.jpg" alt="slide3"/></li>
-                <li class="slide"><img src="./img/maison5.jpg" alt="slide4"/></li>
-                <li class="slide"><img src="./img/maison4.jpg" alt="slide5"/></li>
-                <li class="slide"><img src="./img/maison3.jpg" alt="slide1"/></li>
-                <li class="slide"><img src="./img/maison2.jpg" alt="slide2"/></li>
-                <li class="slide"><img src="./img/maison1.jpg" alt="slide3"/></li>
-                <li class="slide"><img src="./img/villa2.jpg" alt="slide4"/></li>
-                <li class="slide"><img src="./img/villa1.jpg" alt="slide5"/></li>
-            </ul>
-         </div>
-        </div>
+
+    <section class="slideshow">
+            <div class="content">
+               <div class="slider-content">
+                  <figure class="shadow"><img src="./img/slide1.jpg"></figure>
+                  <figure class="shadow"><img src="./img/slide2.jpg"></figure>
+                  <figure class="shadow"><img src="./img/slide3.jpg"></figure>
+                  <figure class="shadow"><img src="./img/maison7.jpg"></figure>
+                  <figure class="shadow"><img src="./img/slide5.jpg"></figure>
+                  <figure class="shadow"><img src="./img/villa1.jpg"></figure>
+                  <figure class="shadow"><img src="./img/villa2.jpg"></figure>
+                  <figure class="shadow"><img src="./img/maison4.jpg"></figure>
+                  <figure class="shadow"><img src="./img/maison5.jpg"></figure>
+                  <figure class="shadow"><img src="./img/maison6.jpg"></figure>
+                  
+                  
+               </div>
+            </div>
+        </section> 
+        <div id="gallery">
+  
+  <img src="./img/athens.jpg">
+  <img src="./img/rome.jpg">
+  <img src="./img/paris.jpg">
+  <img src="./img/athens.jpg">
+  <img src="./img/paris.jpg">
+  
+   
+ </div>
         
-    </div>
-    <ul class="grid">
-           <li class="grid-item">
-           <img src="" alt="madrid" />
-           </li>
-           <li class="grid-item">
-           <img src="./img/paris.jpg" alt="paris" />
-           </li>
-           <li class="grid-item">
-           <img src="./img/lisbonne.jpg" alt="lisbonne" />
-           </li>
-           <li class="grid-item">
-           <img src="./img/athens.jpg" alt="athens" />
-           </li>
-           <li class="grid-item">
-           <img src="./img/rome.jpg" alt="rome" />
-           </li>
-        </ul>
+    
+    
