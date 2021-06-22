@@ -23,6 +23,7 @@ body{
     display: flex;
     justify-content: center;
     min-height: 100vh;
+    
 }
 
 .wrapper{
@@ -35,6 +36,7 @@ body{
     background-color: var(--couleur-menu);
     min-height: 50vh;
     border-radius: 32px;
+    box-shadow: 7px 7px 10px 3px rgb(41, 39, 39);
 }
 
 
@@ -91,4 +93,26 @@ input:focus{
     box-shadow: 0px 0px 20px 5px var(--couleur-hover);
     outline: none;
     border: none;
+}
+
+@media (max-width: 721px) {
+    .wrapper{
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 405px) {
+    input,
+    textarea,
+    select{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 387px) {
+    button{
+        margin-left: 20%;
+    }
 }

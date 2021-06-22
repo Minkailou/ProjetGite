@@ -1,4 +1,10 @@
 <?php
+session_start();
+require("fonction/hote.php");
+if(!isconnected()){
+   header("location: admin.php");
+exit(); 
+}
 require_once('managers.php');
 require 'hebergement.php';
 $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement");
@@ -26,7 +32,7 @@ $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement
                     <option>--Choisissez une ville--</option>
                     <option value="paris">Paris</option>
                     <option value="rome">Rome</option>
-                    <option value="athnène">Athnène</option>
+                    <option value="athnène">Athènes</option>
                     <option value="madrid">Madrid</option>
                     <option value="lisbonne">Lisbonne</option>
                 </select>
@@ -45,7 +51,7 @@ $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement
 
                 <textarea class="champs" name="bio" rows="5" cols="33" placeholder="description du logement"></textarea>
 
-                <input class="champs2" type="number" name="chambre" min="0" max="7" placeholder="nombre de chambres">
+                <input class="champs2" type="number" name="chambre" min="0" max="7" placeholder="nombre de couchages">
 
                 <input class="champs2" type="number" name="salle_de_bain" min="0" max="5" placeholder="nombre de salle de bain">
 
@@ -55,7 +61,7 @@ $managers = new HebergementManager("localhost", "root", "", "gite", "hebergement
                     <option value="non">Non</option>
                 </select>
                 
-                <button type="submit" onclick=addHebergements()>Ajouter</button>
+                <button type="submit">Ajouter</button>
             </form>
         </div>
     </div>

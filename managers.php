@@ -79,6 +79,56 @@ class HebergementManager extends ConnexionManager{
         return $req;
     }
 
+    public function getHebergementsparis() {
+        try {
+            $req = $this->dbPDO->query("SELECT * FROM $this->tablename WHERE ville = 'paris' AND disponible ='oui'");
+        }
+        catch (Exception $e) {
+            die('erreur on list: ' . $e->getMessage());
+        }
+        return $req;
+    }
+
+    public function getHebergementsrome() {
+        try {
+            $req = $this->dbPDO->query("SELECT * FROM $this->tablename WHERE ville = 'rome'AND disponible ='oui' ");
+        }
+        catch (Exception $e) {
+            die('erreur on list: ' . $e->getMessage());
+        }
+        return $req;
+    }
+
+    public function getHebergementsathens() {
+        try {
+            $req = $this->dbPDO->query("SELECT * FROM $this->tablename WHERE ville = 'athènes' AND disponible ='oui'");
+        }
+        catch (Exception $e) {
+            die('erreur on list: ' . $e->getMessage());
+        }
+        return $req;
+    }
+
+    public function getHebergementslisbonne() {
+        try {
+            $req = $this->dbPDO->query("SELECT * FROM $this->tablename WHERE ville = 'lisbonne' AND disponible ='oui'");
+        }
+        catch (Exception $e) {
+            die('erreur on list: ' . $e->getMessage());
+        }
+        return $req;
+    }
+
+    public function getHebergementsmadrid() {
+        try {
+            $req = $this->dbPDO->query("SELECT * FROM $this->tablename WHERE ville = 'madrid' AND disponible ='oui' ");
+        }
+        catch (Exception $e) {
+            die('erreur on list: ' . $e->getMessage());
+        }
+        return $req;
+    }
+
     public function addHebergements($data){
         try{
             $rs = $this->dbPDO->prepare("INSERT INTO $this->tablename (titre, ville, prix, style, photo, bio, chambre, salle_de_bain, disponible) VALUE(:titre, :ville, :prix, :style, :photo, :bio, :chambre, :salle_de_bain, :disponible)");
@@ -102,6 +152,52 @@ class HebergementManager extends ConnexionManager{
     }
 
     public function delete($id){
-        $rs=exec("DELETE FROM gite WHERE id_hebergement = $id");
+        $this->dbPDO->exec("DELETE FROM $this->tablename WHERE id_hebergement = $id");
     }
+
+    public function update($id){
+        try{
+        $rs = $this->dbPDO->prepare("UPDATE $this->tablename SET titre=:titre, ville=:ville, prix=:prix, style=:style, photo=:photo, bio=:bio, chambre=:chambre, salle_de_bain=:salle_de_bain, disponible=:disponible WHERE id_hebergement = $id ");
+
+        $reponse = $rs->execute(array(
+            'titre'=>$_POST['titre'],
+            'ville'=>$_POST['ville'],
+            'prix'=>$_POST['prix'],
+            'style'=>$_POST['style'],
+            'photo'=>$_POST['photo'],
+            'bio'=>$_POST['bio'],
+            'chambre'=>$_POST['chambre'],
+            'salle_de_bain'=>$_POST['salle_de_bain'],
+            'disponible'=>$_POST['disponible']
+        ));
+    }
+    catch (Exception $e) {
+        die('error on update: ' . $e->getMessage() );
+    }
+} 
+
+public function reservation($id){
+    try{
+    $rs = $this->dbPDO->prepare("UPDATE $this->tablename SET disponible=:disponible WHERE id_hebergement = $id ");
+
+    $reponse = $rs->execute(array(
+        'disponible'=>$_POST['disponible']
+    ));
+}
+catch (Exception $e) {
+    die('error on update: ' . $e->getMessage() );
+}
+} 
+
+public function recherche(){
+    $gite = $this->dbPDO->query('SELECT * FROM gite ORDER BY id_hebergement DESC');
+    if(isset($_GET['search']) && !empty($_GET['search'])){
+        $search = htmlspecialchars($_GET['search']);
+        $gite = $this->dbPDO->query('SELECT * FROM gite WHERE titre LIKE"%'.$search.'%" ORDER BY id_hebergement DESC');
+        if($gite->rowCount() == 0){
+            $gite = $this->dbPDO->query('SELECT * FROM gite WHERE CONCAT(titre, ville) LIKE "%'.$search.'%" ORDER BY id_hebergement DESC');
+        }
+    }
+}
+
 }

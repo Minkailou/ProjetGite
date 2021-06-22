@@ -34,7 +34,7 @@ input#menuBurger {
 nav#navMenu {
     height: 0;
     opacity: 0;
-    
+    width: 100%;
     
 }
 nav#navMenu ul{
@@ -52,7 +52,7 @@ nav#navMenu ul li a {
     justify-content: center;
     padding: 2rem;
 }
-nav#navMenu a:hover{
+nav#navMenu .link:hover{
     color: var(--couleur-hover);
     background-color: var(--couleur-tranparent); 
     border-bottom: 3px solid var(--couleur-hover);
@@ -191,6 +191,19 @@ input#menuBurger:checked ~nav#navMenu {
         display: none;
     }
     
+}
+.input{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+input{
+    margin-right: 5px;
+    width: 25%;
+    border-radius: 10px;
+    border: 1px solid var(--couleur-menu);
+    background-color: var(--couleur-page);
 }
 
  .slideshow{
