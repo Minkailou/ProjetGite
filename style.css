@@ -67,13 +67,20 @@
   background-color: #fc76550e;
 }
 #searchbar{
-  position:relative;
-   width:1040px;
-    height:auto;
-    margin-left: 10px;
-    margin-top: 100px;
-   
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
+fieldset{
+  display: flex;
+}
+
+input{
+  margin-right: 20px;
+}
+
 .formulaire{
   display:inline-block;
   border: 2px solid var(--couleur-menu);
