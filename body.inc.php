@@ -1,15 +1,23 @@
 <div class="bandeau">
-<div id="searchbar">
-                
-                <h1>Recherche</h1>
-        <form action="search.php" class="formulaire">
-       <input class="champ" type="text" name="search" value="Tapez le text ici ..."/>
-            <input class="bouton" type="submit" value=">>" />
-             
-        </form>
+<div id="searchbar">           
+        <form id="search"method="GET" action="search.php">
+    <fieldset id="fiel-search">
+        <legend id="leg-search">Remplissez le champ</legend>
+        <div>
+            <input id="inp-search" type="search" name="recherche" placeholder="Saisir ville"/>
         </div>
-
+        <div><label id="lab-search">Tous les types</label><input type="radio" name="style" value="Tous" checked/></div>
+        <div><label id="lab-search">Chambres</label><input type="radio" name="style" value="Chambre"/></div>
+        <div><label id="lab-search">Appartements</label><input type="radio" name="style" value="Appartement"/></div>
+        <div><label id="lab-search">Maisons</label><input type="radio" name="style" value="Maison"/></div>
+        <div><label id="lab-search">Villas</label><input type="radio" name="style" value="Villa"/></div>
+        <br/>
+        <input id="sub-search" type="submit" value="Rechercher"/>
+    </fieldset>
+        </form>
+    </section>
 </div>
+
 
 <div id="gallery">
     <div id="paris">
