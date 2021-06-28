@@ -2,9 +2,9 @@
 <div id="searchbar">
                 
                 <h1>Recherche</h1>
-        <form action="" class="formulaire">
-       <input class="champ" type="text" value="Tapez le text ici ..."/>
-            <input class="bouton" type="button" value=" " />
+        <form action="search.php" class="formulaire">
+       <input class="champ" type="text" name="search" value="Tapez le text ici ..."/>
+            <input class="bouton" type="submit" value=">>" />
              
         </form>
         </div>

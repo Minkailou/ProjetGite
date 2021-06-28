@@ -76,7 +76,7 @@
 }
 .formulaire{
   display:inline-block;
-  border: 2px solid var(--couleur-menu);
+  /* border: 2px solid var(--couleur-menu); */
 }
 .formulaire .champ{
   width:600px;
@@ -84,7 +84,7 @@
    border: 2px solid var(--couleur-hover);
   }
 .formulaire .bouton{ 
-  background-image: url(./img/1545.png);
+  /* background-image: url(./img/1545.png); */
   background-repeat: no-repeat;
   width: 40px;
   height: 40px;
