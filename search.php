@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/icone.png" type="image/x-icon">
+    <link href="./img/discover.png" rel="icon">
     <link rel="stylesheet" href="ville.css">
     <title>Recherche</title>
 </head>
@@ -12,9 +12,9 @@
 <?php include('header.inc.php'); ?>
     <section id="section1">
     <div id="searchbar">           
-        <form method="GET" action="search.php">
-    <fieldset>
-        <legend>Recherche</legend>
+        <form id="search2"method="GET" action="search.php">
+    <fieldset id="fiel-search">
+    <legend id="leg-search2">Remplissez le champ</legend>
         <div>
             <input type="search" name="recherche" placeholder="Saisir ville"/>
         </div>
@@ -24,7 +24,7 @@
         <div><label>Maisons</label><input type="radio" name="style" value="Maison"/></div>
         <div><label>Villas</label><input type="radio" name="style" value="Villa"/></div>
         <br/>
-        <input type="submit" value="Rechercher"/>
+        <input id="sub-search2" type="submit" value="Rechercher"/>
     </fieldset>
         </form>
     </section>
@@ -38,7 +38,7 @@
                     ?>
                      <div class="card">
                     <div class='img'>
-                        <img class="imggite" src="img/<?php echo $gite['image']; ?>" alt="photo de logement">
+                        <img class="imggite" src="./img/<?php echo $gite['photo']; ?>" alt="photo de logement">
                     </div>
                     <div class="content">
                         <h1 class="titregite"><?php echo $gite['titre']; ?></h1>
