@@ -137,6 +137,14 @@ input{
   margin-right: 20px;
 }
 
+input:focus{
+  outline: none;
+}
+
+.button{
+  cursor: pointer;
+}
+
 .formulaire{
   display:inline-block;
   /* border: 2px solid var(--couleur-menu); */

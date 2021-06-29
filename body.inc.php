@@ -12,7 +12,7 @@
         <div><label id="lab-search">Maisons</label><input type="radio" name="style" value="Maison"/></div>
         <div><label id="lab-search">Villas</label><input type="radio" name="style" value="Villa"/></div>
         <br/>
-        <input id="sub-search" type="submit" value="Rechercher"/>
+        <input class="button" id="sub-search" type="submit" value="Rechercher"/>
     </fieldset>
         </form>
     </section>

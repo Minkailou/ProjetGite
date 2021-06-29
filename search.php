@@ -24,7 +24,7 @@
         <div><label>Maisons</label><input type="radio" name="style" value="Maison"/></div>
         <div><label>Villas</label><input type="radio" name="style" value="Villa"/></div>
         <br/>
-        <input id="sub-search2" type="submit" value="Rechercher"/>
+        <input class="button" id="sub-search2" type="submit" value="Rechercher"/>
     </fieldset>
         </form>
     </section>

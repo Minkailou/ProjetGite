@@ -54,6 +54,7 @@
     padding-left: 40px;
     padding-right: 40px;
     background-color: var(--couleur-page);
+    
     border: none;
     border-radius: 20px;
 }
@@ -62,8 +63,12 @@
     text-decoration: none;
     font-size: 1.5em;
     letter-spacing: 3px;
-    color: darkred
+    color: black;
 }
+
+.button{
+    cursor: pointer;
+  }
 
 /*search*/
 
@@ -80,6 +85,10 @@
   
   input{
     margin-right: 20px;
+  }
+
+  input:focus{
+    outline: none;
   }
 
 @media (max-width: 1320px) {
